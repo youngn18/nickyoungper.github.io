@@ -12,19 +12,30 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
-
 		<!-- Header -->
 			<header id="header">
+				<div class="outer">
+					<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+				</div>
 				<div class="inner">
 					<a href="/index" class="image avatar"><img src="images/headshot.jpg" alt="" /></a>
-					<h1><strong>Nicholas T. Young</strong><br />
-					Educator<br />
-					Researcher<br />
-					Science Communicator<br />
-					</h1>
+					<h1><strong>Nicholas T. Young</strong><br /></h1>
+					<h1>Educator<br /></h1>
+					<h1>Researcher<br /></h1>
+					<h1>Science Communicator<br /></h1>
 				</div>
 			</header>
-
+			
+			<!-- Scroll across menu options-->
+			<div id="myNav" class="overlay">
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <div class="overlay-content">
+						  <a href="index.html">Home</a>
+						  <a href="projects.html">Projects</a>
+						  <a href="publications.html">Publications</a>
+						  <a href="science-communication.html">Science Communication</a>
+			  </div>
+			</div>
 		<!-- Main -->
 			<div id="main">
 
@@ -38,12 +49,12 @@
 						
 						<p> I earned my bachelor's degree in physics and astonomy/astrophysics at (The) Ohio State University. I also minored in mathematics and cognitive science. </p>
 						<ul class="actions">
-							<li><a href="projects" class="button">Learn More</a></li>
+							<li><a href="projects" class="button">Learn More About My Work</a></li>
 						</ul>
 					</section>
 					
 					<section id="recent">
-						<h2>Recent Work</h2>
+						<h2>Recent Research</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/posters/Young_2019_AAPT_poster.pdf" class="image fit thumb" target="_blank"><img src="images/poster_thumbs/Young_AAPT_19.png" alt="" /></a>
@@ -67,7 +78,7 @@
 							</article>
 						</div>
 						<ul class="actions">
-							<li><a href="/publications" class="button">Full Portfolio</a></li>
+							<li><a href="/publications" class="button">More Posters, Talks, and Papers</a></li>
 						</ul>
 					</section>
 
@@ -451,6 +462,24 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<!-- Open and close the menu-->
+			<script>
+			  function openNav() {
+				document.getElementById("myNav").style.width = "100%";
+			  }
+
+			  function closeNav() {
+				document.getElementById("myNav").style.width = "0%";
+			  }
+			 </script>
+			 <!--Use ESC to close menu -->
+			 <script>
+				$(document).keyup(function(e) {
+					 if (e.keyCode == 27) { // escape key maps to keycode `27`
+					   document.getElementById("myNav").style.width = "0%";
+					}
+				});
+			 </script>
 
 	</body>
 </html>
