@@ -15,7 +15,7 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="outer">
-					<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+					<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; menu</span>
 				</div>
 				<div class="inner">
 					<a href="/index" class="image avatar"><img src="images/headshot.jpg" alt="" /></a>
@@ -25,7 +25,15 @@
 					<h1>Science Communicator<br /></h1>
 				</div>
 			</header>
-			
+			<script>
+			  function openNav() {
+				document.getElementById("myNav").style.width = "100%";
+			  }
+
+			  function closeNav() {
+				document.getElementById("myNav").style.width = "0%";
+			  }
+			 </script>
 			<!-- Scroll across menu options-->
 			<div id="myNav" class="overlay">
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -464,15 +472,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/menu.js"></script>
 			<!-- Open and close the menu-->
-			<script>
-			  function openNav() {
-				document.getElementById("myNav").style.width = "100%";
-			  }
 
-			  function closeNav() {
-				document.getElementById("myNav").style.width = "0%";
-			  }
-			 </script>
 			 <!--Use ESC to close menu -->
 			 <script>
 				$(document).keyup(function(e) {
